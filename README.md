@@ -4,8 +4,6 @@
 
 ### Getting Started
 
-[repository 주소](https://github.com/codestates/im-sprint-tree-ui) 에서 fork 및 clone 후 Pull Request로 제출하세요
-
 - 우리가 최종적으로 만들어야 할 결과물은 `result.html` 을 통해 미리 확인할 수 있습니다. HTML 구조 역시 `result.html`과 동일할 것입니다.
 - Tree UI를 작성할 파일은 `fix_me.js` 파일입니다.
 - 테스트 케이스는 `__test__/index.test.js` 파일에서 확인할 수 있습니다.
