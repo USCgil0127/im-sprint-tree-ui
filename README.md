@@ -23,3 +23,7 @@
 - 조합 재귀함수 (js combination in recursion)
 
 ---------
+
+### Sprint 진행 후 느낀 점
+
+createTreeView(menu, currentNode) 함수를 2가지 버전으로 만들어 봤다. 처음에는 버전2로 완성하고 끝낼 생각이었지만, 고차함수를 이용할 수 있지 않을 까하는 생각으로 map을 사용하여, 재구성해봤다.
