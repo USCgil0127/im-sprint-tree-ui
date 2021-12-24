@@ -171,9 +171,50 @@ const menu = [
 // GOAL: 최종 결과가 resut.html와 같은 모습으로 나와야 합니다.
 
 const root = document.getElementById('root');
+// 버전 1 map을 이용한 방법
 function createTreeView(menu, currentNode) {
   // TODO: createTreeView 함수를 작성하세요.
-  
+  menu.map(value => {
+    const li = document.createElement('li')
+    currentNode.append(li)
+
+    if (value.children) {
+      const box = document.createElement('input')
+      box.setAttribute('type', 'checkbox')
+      li.append(box)
+      const name = document.createElement('span')
+      name.textContent = value.name
+      li.append(name)
+      const ul = document.createElement('ul')
+      li.append(ul)
+      createTreeView(value.children, ul)
+    }
+    else if (!value.children) {
+      li.textContent = value.name
+    }
+  })
 }
+// 버전 2
+// function createTreeView(menu, currentNode) {
+//   // TODO: createTreeView 함수를 작성하세요.
+//   for (let i = 0; i < menu.length; i++) {
+//       const li = document.createElement('li');
+//       if (menu[i].children) {
+//         const input = document.createElement('input');
+//         input.type = 'checkbox';
+//         const span = document.createElement('span');
+//         span.textContent = menu[i].name;
+
+//         const ul = document.createElement('ul');
+//         li.append(input, span, ul);
+//         currentNode.append(li);
+
+//         createTreeView(menu[i].children, ul);
+//       } else {
+//         li.textContent = menu[i].name;
+//         currentNode.append(li);
+//       }
+//   }
+// }
 
 createTreeView(menu, root);
